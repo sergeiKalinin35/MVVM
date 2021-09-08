@@ -41,13 +41,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F4409D9726E91A52003113DA /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		F4AE40A126E4E0C000A2E535 = {
 			isa = PBXGroup;
 			children = (
@@ -72,7 +65,6 @@
 				F4AE40AF26E4E0C000A2E535 /* SceneDelegate.swift */,
 				F4AE40B126E4E0C000A2E535 /* CourseListViewController.swift */,
 				F4409D9526E919FB003113DA /* CourseTableViewCell.swift */,
-				F4409D9726E91A52003113DA /* New Group */,
 				F4AE40B326E4E0C000A2E535 /* Main.storyboard */,
 				F4AE40B626E4E0C200A2E535 /* Assets.xcassets */,
 				F4AE40B826E4E0C200A2E535 /* LaunchScreen.storyboard */,

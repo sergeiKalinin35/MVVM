@@ -10,9 +10,9 @@ import UIKit
 class CourseListViewController: UIViewController {
     
     
-    @IBOutlet var tableView: UITableView!
+    @IBOutlet weak var tableView: UITableView!
     
-    
+ //   private var courses: [Courses] = []
     
     
     

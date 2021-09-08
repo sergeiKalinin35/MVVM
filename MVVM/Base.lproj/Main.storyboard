@@ -54,7 +54,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1034.7826086956522" y="114.50892857142857"/>
+            <point key="canvasLocation" x="928" y="115"/>
         </scene>
         <!--Course Details View Controller-->
         <scene sceneID="dce-w3-Esv">
@@ -65,7 +65,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gac-bf-a9B">
-                                <rect key="frame" x="20" y="140" width="374" height="387"/>
+                                <rect key="frame" x="20" y="210" width="374" height="317"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Csy-6T-kc0">
                                 <rect key="frame" x="315" y="454" width="79" height="73"/>
@@ -79,16 +79,16 @@
                                 </state>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="6AS-yr-p1T">
-                                <rect key="frame" x="8" y="556" width="398" height="80"/>
+                                <rect key="frame" x="20" y="556" width="374" height="80"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v6m-fD-Mtt">
-                                        <rect key="frame" x="0.0" y="0.0" width="398" height="26.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="26.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yeL-mG-dxA">
-                                        <rect key="frame" x="0.0" y="53.5" width="398" height="26.5"/>
+                                        <rect key="frame" x="0.0" y="53.5" width="374" height="26.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -110,11 +110,11 @@
                             <constraint firstItem="tfH-1X-sLt" firstAttribute="bottom" secondItem="6AS-yr-p1T" secondAttribute="bottom" constant="226" id="FRU-F6-htf"/>
                             <constraint firstItem="Csy-6T-kc0" firstAttribute="top" secondItem="tfH-1X-sLt" secondAttribute="top" constant="314" id="Jt1-Av-bDH"/>
                             <constraint firstItem="EMv-4Y-kcp" firstAttribute="top" secondItem="tfH-1X-sLt" secondAttribute="top" id="Jtr-Gp-2UU"/>
-                            <constraint firstItem="6AS-yr-p1T" firstAttribute="leading" secondItem="tfH-1X-sLt" secondAttribute="leading" constant="8" id="S33-h3-g0q"/>
-                            <constraint firstItem="tfH-1X-sLt" firstAttribute="trailing" secondItem="6AS-yr-p1T" secondAttribute="trailing" constant="8" id="auY-7E-3f3"/>
+                            <constraint firstItem="6AS-yr-p1T" firstAttribute="leading" secondItem="tfH-1X-sLt" secondAttribute="leading" constant="20" id="S33-h3-g0q"/>
+                            <constraint firstItem="tfH-1X-sLt" firstAttribute="trailing" secondItem="6AS-yr-p1T" secondAttribute="trailing" constant="20" id="auY-7E-3f3"/>
                             <constraint firstItem="tfH-1X-sLt" firstAttribute="bottom" secondItem="gac-bf-a9B" secondAttribute="bottom" constant="335" id="bas-JO-eZk"/>
                             <constraint firstItem="Csy-6T-kc0" firstAttribute="top" secondItem="EMv-4Y-kcp" secondAttribute="bottom" constant="247" id="deb-C7-hXC"/>
-                            <constraint firstItem="gac-bf-a9B" firstAttribute="top" secondItem="tfH-1X-sLt" secondAttribute="top" id="fgu-SI-mzs"/>
+                            <constraint firstItem="gac-bf-a9B" firstAttribute="top" secondItem="tfH-1X-sLt" secondAttribute="top" constant="70" id="fgu-SI-mzs"/>
                             <constraint firstItem="tfH-1X-sLt" firstAttribute="trailing" secondItem="EMv-4Y-kcp" secondAttribute="trailing" constant="20" id="hAz-fy-Dh8"/>
                             <constraint firstItem="EMv-4Y-kcp" firstAttribute="leading" secondItem="tfH-1X-sLt" secondAttribute="leading" constant="20" id="nfK-zO-iBi"/>
                             <constraint firstItem="tfH-1X-sLt" firstAttribute="trailing" secondItem="Csy-6T-kc0" secondAttribute="trailing" constant="20" id="qr8-LY-PfR"/>
@@ -123,10 +123,17 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="VRE-rh-cYm"/>
+                    <connections>
+                        <outlet property="courseImage" destination="gac-bf-a9B" id="UI5-DX-0CP"/>
+                        <outlet property="courseNameLabel" destination="EMv-4Y-kcp" id="yON-Np-9f5"/>
+                        <outlet property="favoriteButton" destination="Csy-6T-kc0" id="sxn-xu-eTi"/>
+                        <outlet property="numberOfLessonsLabel" destination="v6m-fD-Mtt" id="iwB-b8-Lr3"/>
+                        <outlet property="numberOfTestsLabel" destination="yeL-mG-dxA" id="kP4-hi-vAJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zdV-5j-i0O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1873.913043478261" y="114.50892857142857"/>
+            <point key="canvasLocation" x="1736" y="115"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gaj-gU-wnf">
