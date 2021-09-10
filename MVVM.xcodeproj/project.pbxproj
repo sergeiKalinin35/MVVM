@@ -10,6 +10,9 @@
 		F4409D9426E9177F003113DA /* CourseDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4409D9326E9177F003113DA /* CourseDetailsViewController.swift */; };
 		F4409D9626E919FB003113DA /* CourseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4409D9526E919FB003113DA /* CourseTableViewCell.swift */; };
 		F4409D9926E93A2B003113DA /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4409D9826E93A2B003113DA /* NetworkManager.swift */; };
+		F4756A4326EB7E4C003EAD62 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4756A4226EB7E4C003EAD62 /* ImageManager.swift */; };
+		F4756A4526EB7FFE003EAD62 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4756A4426EB7FFE003EAD62 /* DataManager.swift */; };
+		F4756A4726EB8249003EAD62 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4756A4626EB8249003EAD62 /* Course.swift */; };
 		F4AE40AE26E4E0C000A2E535 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AE40AD26E4E0C000A2E535 /* AppDelegate.swift */; };
 		F4AE40B026E4E0C000A2E535 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AE40AF26E4E0C000A2E535 /* SceneDelegate.swift */; };
 		F4AE40B226E4E0C000A2E535 /* CourseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AE40B126E4E0C000A2E535 /* CourseListViewController.swift */; };
@@ -22,6 +25,9 @@
 		F4409D9326E9177F003113DA /* CourseDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailsViewController.swift; sourceTree = "<group>"; };
 		F4409D9526E919FB003113DA /* CourseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseTableViewCell.swift; sourceTree = "<group>"; };
 		F4409D9826E93A2B003113DA /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		F4756A4226EB7E4C003EAD62 /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
+		F4756A4426EB7FFE003EAD62 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		F4756A4626EB8249003EAD62 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		F4AE40AA26E4E0C000A2E535 /* MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4AE40AD26E4E0C000A2E535 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4AE40AF26E4E0C000A2E535 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +52,8 @@
 		F4AE40A126E4E0C000A2E535 = {
 			isa = PBXGroup;
 			children = (
+				F4756A4426EB7FFE003EAD62 /* DataManager.swift */,
+				F4756A4626EB8249003EAD62 /* Course.swift */,
 				F4409D9326E9177F003113DA /* CourseDetailsViewController.swift */,
 				F4AE40AC26E4E0C000A2E535 /* MVVM */,
 				F4AE40AB26E4E0C000A2E535 /* Products */,
@@ -68,6 +76,7 @@
 				F4AE40B126E4E0C000A2E535 /* CourseListViewController.swift */,
 				F4409D9526E919FB003113DA /* CourseTableViewCell.swift */,
 				F4409D9826E93A2B003113DA /* NetworkManager.swift */,
+				F4756A4226EB7E4C003EAD62 /* ImageManager.swift */,
 				F4AE40B326E4E0C000A2E535 /* Main.storyboard */,
 				F4AE40B626E4E0C200A2E535 /* Assets.xcassets */,
 				F4AE40B826E4E0C200A2E535 /* LaunchScreen.storyboard */,
@@ -146,8 +155,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4756A4726EB8249003EAD62 /* Course.swift in Sources */,
 				F4409D9926E93A2B003113DA /* NetworkManager.swift in Sources */,
+				F4756A4526EB7FFE003EAD62 /* DataManager.swift in Sources */,
 				F4AE40B226E4E0C000A2E535 /* CourseListViewController.swift in Sources */,
+				F4756A4326EB7E4C003EAD62 /* ImageManager.swift in Sources */,
 				F4AE40AE26E4E0C000A2E535 /* AppDelegate.swift in Sources */,
 				F4409D9426E9177F003113DA /* CourseDetailsViewController.swift in Sources */,
 				F4AE40B026E4E0C000A2E535 /* SceneDelegate.swift in Sources */,
