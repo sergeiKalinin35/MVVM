@@ -10,71 +10,66 @@ import UIKit
 class CourseDetailsViewController: UIViewController {
     
     
-    @IBOutlet private var courseNameLabel: UILabel!
-    @IBOutlet private var numberOfLessonsLabel: UILabel!
-    @IBOutlet private var numberOfTestsLabel: UILabel!
-    @IBOutlet private var courseImage: UIImageView!
-    @IBOutlet private var favoriteButton: UIButton!
+    @IBOutlet private weak var courseNameLabel: UILabel!
+    @IBOutlet private weak var numberOfLessonsLabel: UILabel!
+    @IBOutlet private weak var numberOfTestsLabel: UILabel!
+    @IBOutlet private weak var courseImage: UIImageView!
+    @IBOutlet private weak var favoriteButton: UIButton!
     
     
   //  var course: Course!
     
     
     
+    private var isFavorite = false
     
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupNavigationBar()
+        
+        loadFavoriteStatus()
+        setupUI()
+        
+        
+     
     }
     
-
+    @IBAction func toggleFavorite(_sender: UIButton) {
+        isFavorite.toggle()
+        setImageForFavoriteButton()
+        DataManager.shared.setFavoriteStatus(for: course.name ?? "", with: isFavorite)
+        }
+     
     
-    
-    
-    private func setupNavigationBar() {
-        if #available(iOS 13.0, *) {
+    private func setupUI() {
+        courseNameLabel.text = course.name
+        numberOfLessonsLabel.text = "Number of lessons: \(course.numberOfLessons ?? 0)"
+        numberOfTestsLabel.text = "Number of tests: \(course.numberOfTests ?? 0)"
+        
+        if let imageData = ImageManager.shared.fetchImageData(from: course.imageUrl) {
             
-            let navBarApperance = UINavigationBarAppearance()
-            navBarApperance.configureWithOpaqueBackground()
-            navBarApperance.titleTextAttributes = [.foregroundColor: UIColor.white]
-            navBarApperance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-            navBarApperance.backgroundColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
-            navigationController?.navigationBar.standardAppearance = navBarApperance
-            navigationController?.navigationBar.scrollEdgeAppearance = navBarApperance
-
-       }
-    }
-
-}
-
-// MARK: - UITableViewDataSourse
-
-extension CourseListViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        }
+        
+        setImageForFavoriteButton()
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    private func setImageForFavoriteButton() {
+        favoriteButton.tintColor = isFavorite ? .red : .gray
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CourseTableViewCell
-        
-        
-        return cell
+    }
+    
+    private func loadFavoriteStatus() {
+        isFavorite = DataManager.shared.getFavoriteStatus(for: course.name ?? "")
     }
     
 }
-
-// MARK: - UITableViewDelegate
-
-extension CourseListViewController: UITableViewDelegate {
     
     
     
     
-}
-
+    
+  
 
 
 
