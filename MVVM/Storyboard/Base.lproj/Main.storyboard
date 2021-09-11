@@ -28,7 +28,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="JSD-LS-lnw" kind="show" id="lDN-Sg-jFC"/>
+                                            <segue destination="JSD-LS-lnw" kind="show" identifier="ShowDetails" id="lDN-Sg-jFC"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -59,7 +59,7 @@
         <!--Course Details View Controller-->
         <scene sceneID="dce-w3-Esv">
             <objects>
-                <viewController id="JSD-LS-lnw" customClass="CourseDetailsViewController" customModule="MVVM" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ShowDetails" id="JSD-LS-lnw" customClass="CourseDetailsViewController" customModule="MVVM" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dX8-gN-9Rx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

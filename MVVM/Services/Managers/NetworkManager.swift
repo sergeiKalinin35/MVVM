@@ -16,8 +16,8 @@ class NetworkManager {
     private init() {}
     
     
-    func fetchData(completion: @escaping(_ courses: [Course]) -> Void {
-    guard let url = URL(stribg: courseUrl) else { return }
+    func fetchData(completion: @escaping(_ courses: [Course]) -> Void) {
+    guard let url = URL(string: coursesURL) else { return }
     
     
     URLSession.shared.dataTask(with: url) { (data, _, _) in

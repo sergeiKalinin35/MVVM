@@ -12,28 +12,29 @@ class CourseListViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    private var courses: [Courses] = []
-    
-    
-    
-    
-    
-    
-    
-    
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        setupNavigationBar()
+   // private var courses: [Courses] = []
+    private var viewModel: CourseListViewModelProtocol! {
+        didSet {
+            viewModel.fetchCourses {
+                self.tableView.reloadData()
+            }
+            
+        }
     }
-
-
+    
+        override func viewDidLoad() {
+        super.viewDidLoad()
+            
+            viewModel = CourseListViewModel()
+            tableView.rowHeight = 100
+            setupNavigationBar()
+        
+    
 }
 
-private func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     let detailVC =  segue.destination as! CourseDetailsViewController
-    detailVC.course = sender as? Course
+        detailVC.viewModel = sender as? CourseDetailsViewModelProtocol
 }
 
 private func setupNavigationBar() {
@@ -47,23 +48,23 @@ private func setupNavigationBar() {
         navigationController?.navigationBar.standardAppearance = navBarApperance
         navigationController?.navigationBar.scrollEdgeAppearance = navBarApperance
 
-   }
+       }
+    }
+
 }
-
-
 
 // MARK: - UITableViewDataSourse
 
 extension CourseListViewController: UITableViewDataSource {
 func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 10
+    viewModel.numberOfRows()
 }
 
 func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
     let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CourseTableViewCell
-    let course = courses[indexPath.row]
-    
+
+    cell.viewModel =  viewModel.cellViewModel(at: indexPath)
     return cell
 }
 
@@ -75,8 +76,8 @@ extension CourseListViewController: UITableViewDelegate {
 //  снимаем выделение с ячейки когда тапаем по ней  и делаем переход performSegue
 func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     tableView.deselectRow(at: indexPath, animated: true)
-    let course =  courses[indexPath.row]
-    performSegue(withIdentifier: "ShowDetails", sender: course)
+    let detailsViewModel = viewModel.viewModelForSelectedRow(at: indexPath)
+    performSegue(withIdentifier: "ShowDetails", sender: detailsViewModel)
     
     }
 

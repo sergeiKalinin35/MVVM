@@ -8,7 +8,7 @@
 import Foundation
 
 
-protocol CourseDetailsViewModelProtocol: AnyObject {
+protocol CourseDetailsViewModelProtocol: class {
     var courseName: String { get }
     var numberOfLessons: String { get }
     var numberOfTests: String { get }

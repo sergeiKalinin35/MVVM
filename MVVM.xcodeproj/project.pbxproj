@@ -10,6 +10,8 @@
 		F4409D9426E9177F003113DA /* CourseDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4409D9326E9177F003113DA /* CourseDetailsViewController.swift */; };
 		F4409D9626E919FB003113DA /* CourseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4409D9526E919FB003113DA /* CourseTableViewCell.swift */; };
 		F4409D9926E93A2B003113DA /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4409D9826E93A2B003113DA /* NetworkManager.swift */; };
+		F45CCBD626ECDF6200325EF3 /* CourseListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45CCBD526ECDF6200325EF3 /* CourseListViewModel.swift */; };
+		F45CCBD826ECEE7300325EF3 /* TableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45CCBD726ECEE7300325EF3 /* TableViewCellViewModel.swift */; };
 		F4756A4326EB7E4C003EAD62 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4756A4226EB7E4C003EAD62 /* ImageManager.swift */; };
 		F4756A4526EB7FFE003EAD62 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4756A4426EB7FFE003EAD62 /* DataManager.swift */; };
 		F4756A4726EB8249003EAD62 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4756A4626EB8249003EAD62 /* Course.swift */; };
@@ -26,6 +28,8 @@
 		F4409D9326E9177F003113DA /* CourseDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailsViewController.swift; sourceTree = "<group>"; };
 		F4409D9526E919FB003113DA /* CourseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseTableViewCell.swift; sourceTree = "<group>"; };
 		F4409D9826E93A2B003113DA /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		F45CCBD526ECDF6200325EF3 /* CourseListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseListViewModel.swift; sourceTree = "<group>"; };
+		F45CCBD726ECEE7300325EF3 /* TableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellViewModel.swift; sourceTree = "<group>"; };
 		F4756A4226EB7E4C003EAD62 /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		F4756A4426EB7FFE003EAD62 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		F4756A4626EB8249003EAD62 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
@@ -56,6 +60,7 @@
 			children = (
 				F45CCBD426ECDEAC00325EF3 /* TableViewCell */,
 				F4AE40B126E4E0C000A2E535 /* CourseListViewController.swift */,
+				F45CCBD526ECDF6200325EF3 /* CourseListViewModel.swift */,
 			);
 			path = CourseList;
 			sourceTree = "<group>";
@@ -84,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				F4409D9526E919FB003113DA /* CourseTableViewCell.swift */,
+				F45CCBD726ECEE7300325EF3 /* TableViewCellViewModel.swift */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -220,7 +226,9 @@
 				F4756A4526EB7FFE003EAD62 /* DataManager.swift in Sources */,
 				F4AE40B226E4E0C000A2E535 /* CourseListViewController.swift in Sources */,
 				F4756A4326EB7E4C003EAD62 /* ImageManager.swift in Sources */,
+				F45CCBD826ECEE7300325EF3 /* TableViewCellViewModel.swift in Sources */,
 				F4AE40AE26E4E0C000A2E535 /* AppDelegate.swift in Sources */,
+				F45CCBD626ECDF6200325EF3 /* CourseListViewModel.swift in Sources */,
 				F4409D9426E9177F003113DA /* CourseDetailsViewController.swift in Sources */,
 				F4AE40B026E4E0C000A2E535 /* SceneDelegate.swift in Sources */,
 				F4409D9626E919FB003113DA /* CourseTableViewCell.swift in Sources */,
