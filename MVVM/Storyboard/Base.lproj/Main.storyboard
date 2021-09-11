@@ -77,6 +77,9 @@
                                 <state key="normal" image="heart.fill" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="28"/>
                                 </state>
+                                <connections>
+                                    <action selector="toggleFavoriteWith_sender:" destination="JSD-LS-lnw" eventType="touchUpInside" id="kvK-i6-D7J"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="6AS-yr-p1T">
                                 <rect key="frame" x="20" y="556" width="374" height="80"/>
