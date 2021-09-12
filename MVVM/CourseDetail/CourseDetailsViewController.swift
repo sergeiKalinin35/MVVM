@@ -37,9 +37,6 @@ class CourseDetailsViewController: UIViewController {
     
     private func setupUI() {
   
-        
-        setImageForFavoriteButton()
-        
         courseNameLabel.text = viewModel.courseName
         numberOfLessonsLabel.text = viewModel.numberOfLessons
         numberOfTestsLabel.text = viewModel.numberOfTests
@@ -47,7 +44,7 @@ class CourseDetailsViewController: UIViewController {
         courseImage.image = UIImage(data: imageData)
         
         
-        
+        setImageForFavoriteButton()
         
     }
     
@@ -55,7 +52,11 @@ class CourseDetailsViewController: UIViewController {
         favoriteButton.tintColor = viewModel.isFavorite ? .red : .gray
         
     }
-
+  //  private func loadFavoriteButton() {/
+ //       isFavorite = DataManager.shared.getFavoriteStatus(for: course.name ?? "" )
+ //   }
+    
+    
 }
     
     
