@@ -18,7 +18,23 @@ protocol CourseDetailsViewModelProtocol: AnyObject {
 }
 
 
+
+
 class CourseDetailsViewModel: CourseDetailsViewModelProtocol {
+    
+    private let course: Course
+    
+    required init(course: Course) {
+        self.course = course
+        
+    }
+    
+    
+    
+    
+    
+    
+    
     var numberOfLessons: String {
         "Number of lessons: \(course.numberOfLessons ?? 0)"
         
@@ -53,12 +69,7 @@ class CourseDetailsViewModel: CourseDetailsViewModelProtocol {
     
     
     
-    private let course: Course
-    
-    required init(course: Course) {
-        self.course = course
-        
-    }
+  
 }
 
 
