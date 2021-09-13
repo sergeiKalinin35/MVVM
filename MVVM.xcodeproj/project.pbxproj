@@ -10,6 +10,7 @@
 		F4409D9426E9177F003113DA /* CourseDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4409D9326E9177F003113DA /* CourseDetailsViewController.swift */; };
 		F4409D9626E919FB003113DA /* CourseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4409D9526E919FB003113DA /* CourseTableViewCell.swift */; };
 		F4409D9926E93A2B003113DA /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4409D9826E93A2B003113DA /* NetworkManager.swift */; };
+		F459065726EFA9720077781A /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = F459065626EFA9720077781A /* Box.swift */; };
 		F45CCBD626ECDF6200325EF3 /* CourseListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45CCBD526ECDF6200325EF3 /* CourseListViewModel.swift */; };
 		F45CCBD826ECEE7300325EF3 /* TableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45CCBD726ECEE7300325EF3 /* TableViewCellViewModel.swift */; };
 		F4756A4326EB7E4C003EAD62 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4756A4226EB7E4C003EAD62 /* ImageManager.swift */; };
@@ -28,6 +29,7 @@
 		F4409D9326E9177F003113DA /* CourseDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailsViewController.swift; sourceTree = "<group>"; };
 		F4409D9526E919FB003113DA /* CourseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseTableViewCell.swift; sourceTree = "<group>"; };
 		F4409D9826E93A2B003113DA /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		F459065626EFA9720077781A /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		F45CCBD526ECDF6200325EF3 /* CourseListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseListViewModel.swift; sourceTree = "<group>"; };
 		F45CCBD726ECEE7300325EF3 /* TableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellViewModel.swift; sourceTree = "<group>"; };
 		F4756A4226EB7E4C003EAD62 /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
@@ -55,6 +57,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F459065526EFA91E0077781A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F459065626EFA9720077781A /* Box.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		F45CCBD126ECDD7700325EF3 /* CourseList */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +152,7 @@
 				F45CCBD126ECDD7700325EF3 /* CourseList */,
 				F4756A4B26EB8640003EAD62 /* CourseDetail */,
 				F45CCBD226ECDDED00325EF3 /* Services */,
+				F459065526EFA91E0077781A /* Helpers */,
 				F4756A4A26EB85C0003EAD62 /* Models */,
 				F4756A4826EB84ED003EAD62 /* Storyboard */,
 				F4AE40B626E4E0C200A2E535 /* Assets.xcassets */,
@@ -226,6 +237,7 @@
 				F4756A4526EB7FFE003EAD62 /* DataManager.swift in Sources */,
 				F4AE40B226E4E0C000A2E535 /* CourseListViewController.swift in Sources */,
 				F4756A4326EB7E4C003EAD62 /* ImageManager.swift in Sources */,
+				F459065726EFA9720077781A /* Box.swift in Sources */,
 				F45CCBD826ECEE7300325EF3 /* TableViewCellViewModel.swift in Sources */,
 				F4AE40AE26E4E0C000A2E535 /* AppDelegate.swift in Sources */,
 				F45CCBD626ECDF6200325EF3 /* CourseListViewModel.swift in Sources */,

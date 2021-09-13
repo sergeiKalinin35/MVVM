@@ -38,11 +38,6 @@ required init(course: Course) {
         
         self.course = course
     }
-    
-    
-    
-    
-    
 }
 
 

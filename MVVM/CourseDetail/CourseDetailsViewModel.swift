@@ -13,8 +13,9 @@ protocol CourseDetailsViewModelProtocol: AnyObject {
     var numberOfLessons: String { get }
     var numberOfTests: String { get }
     var imageData: Data? { get }
-    var isFavorite: Bool { get set }
+    var isFavorite: Box<Bool> { get }
     init(course: Course)
+    func changeFavoriteStatus()
 }
 
 
@@ -22,17 +23,11 @@ protocol CourseDetailsViewModelProtocol: AnyObject {
 
 class CourseDetailsViewModel: CourseDetailsViewModelProtocol {
     
-    private let course: Course
+  
     
-    required init(course: Course) {
-        self.course = course
-        
+    var courseName: String {
+        course.name ?? ""
     }
-    
-    
-    
-    
-    
     
     
     var numberOfLessons: String {
@@ -45,31 +40,34 @@ class CourseDetailsViewModel: CourseDetailsViewModelProtocol {
         
     }
     
+    
     var imageData: Data? {
         
         ImageManager.shared.fetchImageData(from: course.imageUrl)
     }
     
-    var courseName: String {
-        course.name ?? "" 
-    }
+  
     
   
-    var isFavorite: Bool {
-        get {// берем данные
-            DataManager.shared.getFavoriteStatus(for: course.name ?? "")
-            
-        } set {
-            
-            DataManager.shared.setFavoriteStatus(for: course.name ?? "", with: newValue) // set coхраняем значение 
-        }
+    var isFavorite: Box<Bool>
+      
+        
+    
+    
+   
+    
+    private let course: Course
+    
+    required init(course: Course) {
+        self.course = course
+        isFavorite = Box(value: DataManager.shared.getFavoriteStatus(for: course.name ?? ""))
     }
     
+    func changeFavoriteStatus() {
+        isFavorite.value.toggle()
+        DataManager.shared.setFavoriteStatus(for: course.name ?? "", with: isFavorite.value)
+    }
     
-    
-    
-    
-  
 }
 
 

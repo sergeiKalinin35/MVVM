@@ -43,11 +43,7 @@ class CourseListViewModel: CourseListViewModelProtocol {
         courses.count
     }
     
-    func cellViewModel(at indexPath: IndexPath) -> TableViewCellViewModelProtocol {
-        let course = courses[indexPath.row]
-       return TableViewCellViewModel(course: course)
-        
-    }
+ 
     
     func viewModelForSelectedRow(at indexPath: IndexPath) -> CourseDetailsViewModelProtocol? {
         let course = courses[indexPath.row]

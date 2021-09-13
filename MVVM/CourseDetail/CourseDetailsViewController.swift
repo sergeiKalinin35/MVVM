@@ -18,45 +18,49 @@ class CourseDetailsViewController: UIViewController {
     
     
     var viewModel: CourseDetailsViewModelProtocol!
-
+    
+    private var isFavorite = false
     
     
 
-    override func viewDidLoad() {
+    //MARK: - viewDidLoad
+        override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
     
     }
     
+    
+    
     @IBAction func toggleFavorite(_sender: UIButton) {
-        viewModel.isFavorite.toggle()
+
+        
+        
+        viewModel.changeFavoriteStatus()
         setImageForFavoriteButton()
     
         }
      
     
     private func setupUI() {
+        
+     
+        
+        
+        setImageForFavoriteButton()
   
         courseNameLabel.text = viewModel.courseName
         numberOfLessonsLabel.text = viewModel.numberOfLessons
         numberOfTestsLabel.text = viewModel.numberOfTests
         guard let imageData = viewModel.imageData else { return }
         courseImage.image = UIImage(data: imageData)
-        
-        
-        setImageForFavoriteButton()
-        
     }
     
     private func setImageForFavoriteButton() {
-        favoriteButton.tintColor = viewModel.isFavorite ? .red : .gray
+        favoriteButton.tintColor = isFavorite ? .red : .gray
         
     }
-  //  private func loadFavoriteButton() {/
- //       isFavorite = DataManager.shared.getFavoriteStatus(for: course.name ?? "" )
- //   }
-    
-    
+
 }
     
     

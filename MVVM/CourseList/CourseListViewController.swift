@@ -12,7 +12,8 @@ class CourseListViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-   // private var courses: [Courses] = []
+    
+    
     private var viewModel: CourseListViewModelProtocol! {
         didSet {
             viewModel.fetchCourses {
@@ -65,6 +66,7 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
     let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CourseTableViewCell
 
     cell.viewModel =  viewModel.cellViewModel(at: indexPath)
+    
     return cell
 }
 

@@ -59,7 +59,7 @@
         <!--Course Details View Controller-->
         <scene sceneID="dce-w3-Esv">
             <objects>
-                <viewController storyboardIdentifier="ShowDetails" id="JSD-LS-lnw" customClass="CourseDetailsViewController" customModule="MVVM" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="JSD-LS-lnw" customClass="CourseDetailsViewController" customModule="MVVM" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dX8-gN-9Rx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -67,31 +67,17 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gac-bf-a9B">
                                 <rect key="frame" x="20" y="210" width="374" height="317"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Csy-6T-kc0">
-                                <rect key="frame" x="315" y="454" width="79" height="73"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="73" id="9GA-Ju-CFQ"/>
-                                    <constraint firstAttribute="width" constant="79" id="WvD-OP-8qY"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" image="heart.fill" catalog="system">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="28"/>
-                                </state>
-                                <connections>
-                                    <action selector="toggleFavoriteWith_sender:" destination="JSD-LS-lnw" eventType="touchUpInside" id="kvK-i6-D7J"/>
-                                </connections>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="6AS-yr-p1T">
-                                <rect key="frame" x="20" y="556" width="374" height="80"/>
+                                <rect key="frame" x="20" y="615" width="374" height="98"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v6m-fD-Mtt">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="26.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v6m-fD-Mtt">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="44.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yeL-mG-dxA">
-                                        <rect key="frame" x="0.0" y="53.5" width="374" height="26.5"/>
+                                        <rect key="frame" x="0.0" y="71.5" width="374" height="26.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -99,7 +85,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EMv-4Y-kcp">
-                                <rect key="frame" x="20" y="140" width="374" height="67"/>
+                                <rect key="frame" x="20" y="140" width="374" height="29"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -108,28 +94,23 @@
                         <viewLayoutGuide key="safeArea" id="tfH-1X-sLt"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6AS-yr-p1T" firstAttribute="top" secondItem="gac-bf-a9B" secondAttribute="bottom" constant="29" id="2OQ-Ex-oGP"/>
+                            <constraint firstItem="6AS-yr-p1T" firstAttribute="top" secondItem="gac-bf-a9B" secondAttribute="bottom" constant="88" id="2OQ-Ex-oGP"/>
                             <constraint firstItem="gac-bf-a9B" firstAttribute="leading" secondItem="tfH-1X-sLt" secondAttribute="leading" constant="20" id="6Hf-gC-5GQ"/>
-                            <constraint firstItem="tfH-1X-sLt" firstAttribute="bottom" secondItem="6AS-yr-p1T" secondAttribute="bottom" constant="226" id="FRU-F6-htf"/>
-                            <constraint firstItem="Csy-6T-kc0" firstAttribute="top" secondItem="tfH-1X-sLt" secondAttribute="top" constant="314" id="Jt1-Av-bDH"/>
+                            <constraint firstItem="tfH-1X-sLt" firstAttribute="bottom" secondItem="6AS-yr-p1T" secondAttribute="bottom" constant="149" id="FRU-F6-htf"/>
                             <constraint firstItem="EMv-4Y-kcp" firstAttribute="top" secondItem="tfH-1X-sLt" secondAttribute="top" id="Jtr-Gp-2UU"/>
                             <constraint firstItem="6AS-yr-p1T" firstAttribute="leading" secondItem="tfH-1X-sLt" secondAttribute="leading" constant="20" id="S33-h3-g0q"/>
                             <constraint firstItem="tfH-1X-sLt" firstAttribute="trailing" secondItem="6AS-yr-p1T" secondAttribute="trailing" constant="20" id="auY-7E-3f3"/>
                             <constraint firstItem="tfH-1X-sLt" firstAttribute="bottom" secondItem="gac-bf-a9B" secondAttribute="bottom" constant="335" id="bas-JO-eZk"/>
-                            <constraint firstItem="Csy-6T-kc0" firstAttribute="top" secondItem="EMv-4Y-kcp" secondAttribute="bottom" constant="247" id="deb-C7-hXC"/>
                             <constraint firstItem="gac-bf-a9B" firstAttribute="top" secondItem="tfH-1X-sLt" secondAttribute="top" constant="70" id="fgu-SI-mzs"/>
                             <constraint firstItem="tfH-1X-sLt" firstAttribute="trailing" secondItem="EMv-4Y-kcp" secondAttribute="trailing" constant="20" id="hAz-fy-Dh8"/>
                             <constraint firstItem="EMv-4Y-kcp" firstAttribute="leading" secondItem="tfH-1X-sLt" secondAttribute="leading" constant="20" id="nfK-zO-iBi"/>
-                            <constraint firstItem="tfH-1X-sLt" firstAttribute="trailing" secondItem="Csy-6T-kc0" secondAttribute="trailing" constant="20" id="qr8-LY-PfR"/>
                             <constraint firstItem="tfH-1X-sLt" firstAttribute="trailing" secondItem="gac-bf-a9B" secondAttribute="trailing" constant="20" id="xjS-4Q-TJA"/>
-                            <constraint firstItem="tfH-1X-sLt" firstAttribute="bottom" secondItem="Csy-6T-kc0" secondAttribute="bottom" constant="335" id="zlX-H9-mIU"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="VRE-rh-cYm"/>
                     <connections>
                         <outlet property="courseImage" destination="gac-bf-a9B" id="UI5-DX-0CP"/>
                         <outlet property="courseNameLabel" destination="EMv-4Y-kcp" id="yON-Np-9f5"/>
-                        <outlet property="favoriteButton" destination="Csy-6T-kc0" id="sxn-xu-eTi"/>
                         <outlet property="numberOfLessonsLabel" destination="v6m-fD-Mtt" id="iwB-b8-Lr3"/>
                         <outlet property="numberOfTestsLabel" destination="yeL-mG-dxA" id="kP4-hi-vAJ"/>
                     </connections>
@@ -158,7 +139,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="heart.fill" catalog="system" width="128" height="109"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
